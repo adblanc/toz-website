@@ -1,0 +1,98 @@
+@import "mixins";
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: $textColor;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 15px;
+}
+
+footer {
+  z-index: 2;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#copyright {
+  margin-bottom: 10px;
+}
+
+#socials {
+  text-decoration: none;
+  margin: auto;
+
+  padding: 20px;
+
+  a {
+    text-decoration: none;
+    color: $textColor;
+    height: 100%;
+    width: 100%;
+    margin: 0 10px 0 10px;
+    text-align: center;
+  }
+}
+
+footer {
+  @include mQ(600px) {
+    #socials {
+      font-size: 20px;
+    }
+    #copyright {
+      font-size: 18px;
+    }
+  }
+  @include mQ(768px) {
+    #socials {
+      font-size: 24px;
+    }
+    #copyright {
+      font-size: 18px;
+    }
+  }
+  @include mQ(992px) {
+    #socials {
+      font-size: 26px;
+    }
+    #copyright {
+      font-size: 20px;
+    }
+    @include mQ(1200px) {
+      #socials {
+        font-size: 30px;
+      }
+      #copyright {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+.fab:hover {
+  position: relative;
+  top: -4px;
+}
+
+#instagram:hover {
+  color: #bc2a8d;
+}
+
+#twitter:hover {
+  color: #00aced;
+}
+
+#snapchat:hover {
+  color: #fffc00;
+}
+
+#facebook:hover {
+  color: #3b5998;
+}
